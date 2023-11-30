@@ -8,10 +8,17 @@ from pystray import MenuItem as item
 
 # Function to open configuration.py
 def open_configuration(icon, item):
+    global microphone_listening
+
+    if microphone_listening:
+        stop_mic_listener(icon)
+
     subprocess.run(["python", os.path.join("config", "configuration.py")])
 
 # Function to exit the application
 def exit_application(icon, item):
+    if microphone_listening:
+        stop_mic_listener(icon)
     icon.stop()
     os._exit(0)
 
@@ -22,23 +29,21 @@ def toggle_microphone(icon, item):
 
     # Change the icon based on microphone state
     if microphone_listening:
-        icon.icon = Image.open(os.path.join(script_directory, "icons/micko_recording.ico"))
-        start_mic_listener()
+        start_mic_listener(icon)
     else:
-        icon.icon = Image.open(os.path.join(script_directory, "icons/micko.ico"))
-        stop_mic_listener()
+        stop_mic_listener(icon)
 
 # Function to start mic_listener.py
-def start_mic_listener():
+def start_mic_listener(icon):
     global mic_listener_process
-
     # If the process is not started or has terminated, start a new one
     if not mic_listener_process or mic_listener_process.poll() is not None:
         mic_listener_path = os.path.join(script_directory, "mic_listener.py")
         mic_listener_process = subprocess.Popen(["python", mic_listener_path])
+        icon.icon = Image.open(os.path.join(script_directory, "icons/micko_recording.ico"))
 
 # Function to stop mic_listener.py
-def stop_mic_listener():
+def stop_mic_listener(icon):
     global mic_listener_process
 
     # If the process is started, terminate it forcefully
@@ -46,6 +51,7 @@ def stop_mic_listener():
         mic_listener_process.terminate()
 
     mic_listener_process = None
+    icon.icon = Image.open(os.path.join(script_directory, "icons/micko.ico"))
 
 # Function to create the system tray icon
 def create_systray():

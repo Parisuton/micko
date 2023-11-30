@@ -4,6 +4,7 @@ from beeply.notes import *
 import json
 import os
 import pyaudio
+from pathlib import Path
 
 class ConfigurationWindow:
     def __init__(self, parent):
@@ -112,12 +113,12 @@ class ConfigurationWindow:
             settings["recording_device_index"] = selected_device[0]
 
         # Save configuration to the JSON file in the script's directory
-        script_directory = os.path.dirname(os.path.realpath(__file__))
-        json_file_path = os.path.join(script_directory, "config.json")
+        script_directory = Path(__file__).resolve().parent
+        json_file_path = script_directory / "config.json"
 
         with open(json_file_path, "w") as file:
             json.dump(settings, file)
-        
+
         self.parent.destroy()
 
 if __name__ == "__main__":
