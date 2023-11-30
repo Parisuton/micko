@@ -10,16 +10,35 @@ class ConfigurationWindow:
     def __init__(self, parent):
         self.parent = parent
         self.parent.title("Micko Monitor Config")
-        self.parent.geometry("425x200")
+        self.parent.geometry("415x190")
+        self.set_dark_theme()  # Call the method to set the dark theme
         self.create_widgets()
         self.load_settings()
 
+    def set_dark_theme(self):
+        # Set the background color for the entire window
+        self.parent.configure(bg="#2E2E2E")
+
+        # Configure options to achieve a dark appearance
+        self.parent.option_add('*TFrame*Background', '#2E2E2E')
+        self.parent.option_add('*TFrame*Foreground', 'white')
+        self.parent.option_add('*TLabel*Background', '#2E2E2E')
+        self.parent.option_add('*TLabel*Foreground', 'white')
+        self.parent.option_add('*TButton*Background', '#404040')
+        self.parent.option_add('*TButton*Foreground', 'white')
+        self.parent.option_add('*TButton*activeBackground', '#606060')
+        self.parent.option_add('*TCombobox*Background', '#404040')
+        self.parent.option_add('*TCombobox*Foreground', 'white')
+        self.parent.option_add('*TCombobox*fieldBackground', '#404040')
+        self.parent.option_add('*TEntry*Background', '#404040')
+        self.parent.option_add('*TEntry*Foreground', 'white')
+
     def create_widgets(self):
-        frame = ttk.Frame(self.parent, padding="10")
+        frame = ttk.Frame(self.parent, padding="10", style="TFrame")  # Use the dark style for the frame
         frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
 
         # Threshold Volume
-        ttk.Label(frame, text="Threshold Volume").grid(row=0, column=0, pady=10)
+        ttk.Label(frame, text="Threshold Volume", style="TLabel").grid(row=0, column=0, pady=10)
         self.threshold_var = tk.DoubleVar()
         self.threshold_var.set(40.0)
         ttk.Scale(frame, from_=0, to=100, variable=self.threshold_var, length=200, orient=tk.HORIZONTAL, command=self.update_threshold_entry).grid(row=0, column=1, pady=10)
