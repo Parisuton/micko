@@ -1,2 +1,2 @@
 # micko
-Micko, the Mic volume monitor.
+Micko, the microphone volume monitor.
