@@ -13,7 +13,7 @@ def open_configuration(icon, item):
     if microphone_listening:
         stop_mic_listener(icon)
 
-    subprocess.run(["python", os.path.join("config", "configuration.py")])
+    subprocess.run(["python", os.path.join("config", "configuration.py")],creationflags=subprocess.CREATE_NO_WINDOW)
 
 # Function to exit the application
 def exit_application(icon, item):
@@ -39,7 +39,7 @@ def start_mic_listener(icon):
     # If the process is not started or has terminated, start a new one
     if not mic_listener_process or mic_listener_process.poll() is not None:
         mic_listener_path = os.path.join(script_directory, "mic_listener.py")
-        mic_listener_process = subprocess.Popen(["python", mic_listener_path])
+        mic_listener_process = subprocess.Popen(["python", mic_listener_path],creationflags=subprocess.CREATE_NO_WINDOW)
         icon.icon = Image.open(os.path.join(script_directory, "icons/micko_recording.ico"))
 
 # Function to stop mic_listener.py

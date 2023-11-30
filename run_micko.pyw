@@ -4,8 +4,8 @@ from pathlib import Path
 import os
 
 def install_dependencies():
-    subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
-    subprocess.run([sys.executable, 'src/setup.py', 'install'])
+    subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'],creationflags=subprocess.CREATE_NO_WINDOW)
+    subprocess.run([sys.executable, 'src/setup.py', 'install'],creationflags=subprocess.CREATE_NO_WINDOW)
 
 def check_config():
     config_path = Path("config") / "config.json"
@@ -20,7 +20,7 @@ def check_config():
             pass
 
 def start_micko():
-    subprocess.run([sys.executable, str(Path("src") / "micko.py")])
+    subprocess.run([sys.executable, str(Path("src") / "micko.py")],creationflags=subprocess.CREATE_NO_WINDOW)
 
 
 def main():
