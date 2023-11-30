@@ -15,7 +15,7 @@ def check_config():
         while not os.path.exists(config_path):
             pass
 
-    print("Configurations are loaded. Continue with the rest of the application.")
+    print("Configurations are loaded. Continue with the rest of the application.\n ##############\n\n\n")
 
 def main():
     check_config()
