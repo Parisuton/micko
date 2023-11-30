@@ -1,6 +1,5 @@
 import subprocess
 import sys
-import time
 
 def install_dependencies():
     subprocess.run([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
@@ -12,4 +11,3 @@ def start_micko():
 if __name__ == "__main__":
     install_dependencies()
     start_micko()
-    time.sleep(4)
