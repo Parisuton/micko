@@ -20,7 +20,7 @@ Micko keeps a vigilant eye on your microphone volume, ensuring that you stay in 
 
 - __Threshold Volume__: Adjust the microphone threshold volume using the slider for precise control. Set it to your preferred level, ensuring that Micko responds to your unique audio requirements.
 
-- __Beep__ Sound Selection__: Explore the array of beep sounds and choose the one that resonates with your style. Preview the sound with a click, and Micko will keep you informed in a way that suits your preferences.
+- __Beep Sound Selection__: Explore the array of beep sounds and choose the one that resonates with your style. Preview the sound with a click, and Micko will keep you informed in a way that suits your preferences.
 
 - __Device Selection__: Micko provides a list of available sound recording devices. Pick the one that aligns with your setup, and Micko will seamlessly integrate with your chosen device.
 
@@ -36,3 +36,13 @@ Follow these steps to install micko on your Windows:
 - First step: 
 
 - Second step
+
+### __Want to have micko run on Windows start up? (Optional & Recommended)__
+
+- Create a shortcut of the run_micko by right-clicking the file.
+
+- Open run menu (windows+R), type shell::startup.
+
+- Drag the shortcut to the Startup-folder that just opened.
+
+You're all set!
