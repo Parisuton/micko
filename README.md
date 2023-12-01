@@ -1,5 +1,6 @@
 # micko
 Meet micko, the unapologetic microphone volume monitor designed to beep the living daylights out of loud gamers. Crafted by a husband who understands that sometimes, a little extra encouragement is needed to keep those vocal cords in check. By a gamer who knows that when the game gets intense, the shouts get loud. This ingenious design ensures that wives stay happy and gaming sessions stay epic. 
+
 ![micko](/src/icons/micko.ico)
 
 ## Overview
