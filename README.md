@@ -53,7 +53,7 @@ Run the following command to install the required Python packages: ```pip instal
 
 
 ### Step 5: Run micko
-Run micko using the following command: ```python run_micko.py```
+Run micko using the following command: ```python run_micko.pyw```
 
 You can also make a shortcut for micko by right-clicking on run_micko.pyw and selecting "Send to" --> "Desktop (create shortcut)". You can now double-click the shortcut.
 
@@ -63,7 +63,7 @@ When you first start micko, you will be prompted with the configuration window. 
 >[!TIP]
 > ### Auto-Start on Windows
 > Here are ezpz steps on how to start micko with your Windows:
-> - __Create Shortcut:__ Right-click on run_micko.pyw and create a shortcut.
+> - __Create Shortcut:__ Right-click on `run_micko.pyw` and create a shortcut.
 > - __Open Startup Folder:__ Press `Windows+R`, type `shell::startup`, and press Enter.
 > - __Add Shortcut:__ Drag the shortcut into the opened Startup folder.
 > Now, micko will run on Windows startup.
