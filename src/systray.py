@@ -22,7 +22,7 @@ def exit_application(icon, item):
     icon.stop()
     os._exit(0)
 
-# Function to toggle microphone and change the icon
+# Function to toggle microphone
 def toggle_microphone(icon, item):
     global microphone_listening
     microphone_listening = not microphone_listening
@@ -33,7 +33,7 @@ def toggle_microphone(icon, item):
     else:
         stop_mic_listener(icon)
 
-# Function to start mic_listener.py
+# Function to start mic_listener.py and change icon
 def start_mic_listener(icon):
     global mic_listener_process
     # If the process is not started or has terminated, start a new one
@@ -42,7 +42,7 @@ def start_mic_listener(icon):
         mic_listener_process = subprocess.Popen(["python", mic_listener_path],creationflags=subprocess.CREATE_NO_WINDOW)
         icon.icon = Image.open(os.path.join(script_directory, "icons/micko_recording.ico"))
 
-# Function to stop mic_listener.py
+# Function to stop mic_listener.py and revert icon change
 def stop_mic_listener(icon):
     global mic_listener_process
 
@@ -63,7 +63,7 @@ def create_systray():
             item('Open Configuration', open_configuration),
             item('Exit Application', exit_application))
 
-    # Set up the system tray icon
+    # Sets the default icon
     icon = pystray.Icon("micko", image, menu=menu)
 
     # Run the system tray icon in a separate thread

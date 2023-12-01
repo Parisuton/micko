@@ -2,8 +2,8 @@ import os
 import subprocess
 import sys
 
+# Check if config.json exists in the configuration folder
 def check_config():
-    # Check if config.json exists in the configuration folder
     config_path = os.path.join("config", "config.json")
 
     if not os.path.exists(config_path):

@@ -15,7 +15,6 @@ def check_config():
 
         subprocess.run([sys.executable, str(Path("config") / "configuration.py")],creationflags=subprocess.CREATE_NO_WINDOW)
 
-        # Wait for configuration.py to be saved
         while not config_path.exists():
             pass
 
@@ -24,7 +23,7 @@ def start_micko():
 
 
 def main():
-    # Set the current working directory to the root of the project
+    # This sets the current working directory as the root of the project
     os.chdir(Path(__file__).resolve().parent)
 
     check_config()

@@ -21,7 +21,7 @@ class MicrophoneListener:
 
     def load_configuration(self):
         config_path = Path(__file__).resolve().parent.parent / "config" / "config.json"
-        # print(f"Config Path: {config_path}")  # Debug line
+        print(f"Config Path: {config_path}")  # Debug line
         try:
             with config_path.open("r") as config_file:
                 config_data = json.load(config_file)
