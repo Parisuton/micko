@@ -30,7 +30,7 @@ class MicrophoneListener:
 
             self.sound_device = config_data.get("recording_device_index", 0)
             self.threshold_volume = config_data.get("threshold_volume", 40.0)
-            self.beep_note = config_data.get("beep_sound", "_B")
+            self.beep_note = config_data.get("beep_sound", "A_")
 
             # Debug lines
             print(f"Loaded sound_device: {self.sound_device}")
@@ -40,7 +40,7 @@ class MicrophoneListener:
         except FileNotFoundError:
             self.sound_device = 0
             self.threshold_volume = 40.0
-            self.beep_note = "_B"
+            self.beep_note = "A_"
 
 
 if __name__ == "__main__":
