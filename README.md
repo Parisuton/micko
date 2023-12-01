@@ -55,7 +55,7 @@ Run micko using the following command: ```python run_micko.pyw```
 
 You can also make a shortcut for micko by right-clicking on run_micko.pyw and selecting "Send to" --> "Desktop (create shortcut)". You can now double-click the shortcut.
 
-When you first start micko, you will be prompted with the configuration window. After that you should find it in the system tray. Search for the micko icon!
+When you first start micko, you will be prompted with the configuration window. After that you should find micko in the system tray. Search for the micko icon!
 
 
 >[!TIP]
