@@ -24,7 +24,7 @@ Once you have installed and ran micko, you will spot the micko icon (see above) 
 ## Compatibility
 micko is designed to enhance your audio experience on Windows. It integrates seamlessly with your existing setup, offering a hassle-free monitoring solution. micko runs in the system tray, so look out for those bottom right icons!
 
-## Installation
+# Installation
 Follow these steps to install micko on your Windows machine:
 
 > [!NOTE]
