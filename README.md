@@ -32,6 +32,10 @@ Follow these steps to install micko on your Windows machine:
 - During installation, make sure to check the box that says "Add Python to PATH."
 
 ### Step 2: Clone the Repository
+> [!IMPORTANT]
+> __Prerequisite: Git Installation__
+> If you don't have Git installed, you can download and install it from the official [Git website](https://git-scm.com/downloads).
+
 - Open the command prompt (cmd) or terminal.
 - Navigate to the directory using `cd <C:\Path>` where you want to install micko.
 - Run the following command to clone the repository:
