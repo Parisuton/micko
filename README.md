@@ -1,5 +1,5 @@
 # micko
-Meet micko, the unapologetic microphone volume monitor designed to beep the living daylights out of loud gamers. Crafted by a husband who understands that sometimes, a little extra encouragement is needed to keep those vocal cords in check. By a gamer who knows that when the game gets intense, the shouts get loud. This ingenious design ensures that wives stay happy and gaming sessions stay epic. 
+Meet micko, the unapologetic microphone volume monitor designed to beep the living daylights out of loud gamers. Crafted by a husband who understands that sometimes, a little extra encouragement is needed to keep those vocal cords in check. By a gamer who knows that when the game gets intense, the shouts get loud. This design ensures that wives stay happy and gaming sessions stay epic. 
 
 ![micko](/src/icons/micko.ico)
 
@@ -33,7 +33,7 @@ Follow these steps to install micko on your Windows machine:
 
 ### Step 2: Clone the Repository
 - Open the command prompt (cmd) or terminal.
-- Navigate to the directory where you want to install micko.
+- Navigate to the directory using `cd <C:\Path>` where you want to install micko.
 - Run the following command to clone the repository:
 
 ```git clone https://github.com/your-username/micko.git```
@@ -52,7 +52,7 @@ Run micko using the following command:
 
 ```python run_micko.py```
 
-You can also make a shortcut for micko by right-clicking on run_micko.pyw and selecting "Send to">"Desktop (create shortcut)". You can now double-click the shortcut.
+You can also make a shortcut for micko by right-clicking on run_micko.pyw and selecting "Send to" --> "Desktop (create shortcut)". You can now double-click the shortcut.
 
 When you first start micko, you will be prompted with the configuration window. After that you should find it in the system tray. Search for the micko icon!
 
@@ -60,7 +60,7 @@ When you first start micko, you will be prompted with the configuration window. 
 
 Here are easy steps on how to start micko with your windows:
 
-- __Create Shortcut:__ Right-click on run_micko.py and create a shortcut.
+- __Create Shortcut:__ Right-click on run_micko.pyw and create a shortcut.
 
 - __Open Startup Folder:__ Press `Windows+R`, type `shell::startup`, and press Enter.
 
