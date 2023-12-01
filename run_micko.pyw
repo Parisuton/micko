@@ -13,7 +13,7 @@ def check_config():
     if not config_path.exists():
         print("Configuration file not found. Launching configuration.py...")
 
-        subprocess.run([sys.executable, str(Path("config") / "configuration.py")])
+        subprocess.run([sys.executable, str(Path("config") / "configuration.py")],creationflags=subprocess.CREATE_NO_WINDOW)
 
         # Wait for configuration.py to be saved
         while not config_path.exists():
