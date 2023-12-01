@@ -27,32 +27,29 @@ micko is designed to enhance your audio experience on Windows. It integrates sea
 ## Installation
 Follow these steps to install micko on your Windows machine:
 
-### Step 1: Install Python
-- Skip this if you have Python installed on your Windows machine already.
-- Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/) or by opening command prompt (cmd) and typing `python`.
+### Prerequisites: Python and Git Installations
+Skip this if you have Python and Git installed on your Windows machine already.
+1. Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/) or by opening command prompt (cmd) and typing `python`.
 - During installation, make sure to check the box that says "Add Python to PATH."
+2. Download and install Git from the official website: [Git website](https://git-scm.com/downloads).
 
 
-### Step 2: Clone the Repository
-> [!IMPORTANT]
-> __Prerequisite: Git Installation.__
-> If you don't have Git installed, you can download and install it from the official [Git website](https://git-scm.com/downloads).
-
+### Step 1: Clone the Repository
 - Open the command prompt (cmd) or terminal.
 - Navigate to the directory using `cd <C:\Path>` where you want to install micko.
 - Run the following command to clone the repository: ```git clone https://github.com/Parisuton/micko.git```
 
 
-### Step 3: Navigate to micko Directory
+### Step 2: Navigate to micko Directory
 Change the working directory to the newly cloned micko folder:
 ```cd micko```
 
 
-### Step 4: Install micko's Dependencies
+### Step 3: Install micko's Dependencies
 Run the following command to install the required Python packages: ```pip install -r requirements.txt```
 
 
-### Step 5: Run micko
+### Step 4: Run micko
 Run micko using the following command: ```python run_micko.pyw```
 
 You can also make a shortcut for micko by right-clicking on run_micko.pyw and selecting "Send to" --> "Desktop (create shortcut)". You can now double-click the shortcut.
