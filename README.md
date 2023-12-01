@@ -15,7 +15,7 @@ micko is not your average microphone volume monitor—it's the enforcer of audio
 
 - __Configuration Saving:__ Save your personalized settings effortlessly. micko ensures that your preferences are stored securely, because a well-configured micko is a happy micko.
 
-- __Dark Theme Design:__ Immerse yourself in a sleek and trendy dark theme, reminiscent of your favorite gaming environments. micko seamlessly blends functionality with aesthetics.
+- __A Minimalist Design:__ Hold your focus on things that matter: micko features a minimalist design that makes running it extremely lightweight and uninterruptive.
 
 ## Usage
 
