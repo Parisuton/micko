@@ -29,7 +29,7 @@ Follow these steps to install micko on your Windows machine:
 
 ### Prerequisites: Python and Git Installations
 Skip this if you have Python and Git installed on your Windows machine already.
-1. Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/) or by opening command prompt (cmd) and typing `python`.
+1. Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/).
    - During installation, make sure to check the box that says "Add Python to PATH."
 2. Download and install Git from the official website: [Git website](https://git-scm.com/downloads).
 
