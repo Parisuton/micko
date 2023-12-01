@@ -5,6 +5,7 @@ import threading
 import pystray
 from PIL import Image
 from pystray import MenuItem as item
+import webbrowser
 
 # Function to open configuration.py
 def open_configuration(icon, item):
@@ -21,6 +22,9 @@ def exit_application(icon, item):
         stop_mic_listener(icon)
     icon.stop()
     os._exit(0)
+
+def open_github(icon):
+    webbrowser.open("https://github.com/Parisuton/micko")
 
 # Function to toggle microphone
 def toggle_microphone(icon, item):
@@ -59,9 +63,11 @@ def create_systray():
     image = Image.open(icon_path)
 
     # Create menu items
-    menu = (item('Toggle Microphone Monitoring', toggle_microphone, default=True),
-            item('Open Configuration', open_configuration),
-            item('Exit Application', exit_application))
+    menu = (item('micko:', toggle_microphone, default=True),
+            item('Toggle Monitoring', toggle_microphone),
+            item('Settings', open_configuration),
+            item('About', open_github),
+            item('Exit', exit_application))
 
     # Sets the default icon
     icon = pystray.Icon("micko", image, menu=menu)
