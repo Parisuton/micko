@@ -35,7 +35,7 @@ Follow these steps to install micko on your Windows machine:
 
 ### Step 2: Clone the Repository
 > [!IMPORTANT]
-> __Prerequisite: Git Installation__
+> __Prerequisite: Git Installation.__
 > If you don't have Git installed, you can download and install it from the official [Git website](https://git-scm.com/downloads).
 
 - Open the command prompt (cmd) or terminal.
@@ -65,9 +65,10 @@ You can also make a shortcut for micko by right-clicking on run_micko.pyw and se
 
 When you first start micko, you will be prompted with the configuration window. After that you should find it in the system tray. Search for the micko icon!
 
+
 >[!TIP]
 > ### Auto-Start on Windows
-> Here are easy steps on how to start micko with your Windows:
+> Here are ezpz steps on how to start micko with your Windows:
 > - __Create Shortcut:__ Right-click on run_micko.pyw and create a shortcut.
 > - __Open Startup Folder:__ Press `Windows+R`, type `shell::startup`, and press Enter.
 > - __Add Shortcut:__ Drag the shortcut into the opened Startup folder.
