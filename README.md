@@ -7,7 +7,7 @@ Micko keeps a vigilant eye on your microphone volume, ensuring that you stay in 
 ## Features
 - Threshold Volume Control: Adjust the microphone threshold volume with precision using the intuitive slider. Fine-tune it to your preferred level for an optimal audio experience.
 
-- Beep Sound Selection: Choose your preferred beep sound from a range of beepying options. Preview the sound with a simple click and set the tone that rings in your ears.
+- Beep Sound Selection: Choose your preferred beep sound from a range of beeping options. Preview the sound with a simple click and set the tone that rings in your ears.
 
 - Device Selection: Micko gives you the flexibility to choose your sound recording device. Browse through available devices and select the one that perfectly captures your voice.
 
