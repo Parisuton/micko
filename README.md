@@ -28,7 +28,7 @@ micko is designed to enhance your audio experience on Windows. It integrates sea
 Follow these steps to install micko on your Windows machine:
 
 ### Step 1: Install Python
-- Download and install Python from the official website: Python Downloads.
+- Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/) or by opening command prompt (cmd) and typing `python`.
 - During installation, make sure to check the box that says "Add Python to PATH."
 
 ### Step 2: Clone the Repository
