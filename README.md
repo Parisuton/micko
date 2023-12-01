@@ -28,6 +28,7 @@ micko is designed to enhance your audio experience on Windows. It integrates sea
 Follow these steps to install micko on your Windows machine:
 
 ### Step 1: Install Python
+- Skip this if you have Python installed on your Windows machine already.
 - Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/) or by opening command prompt (cmd) and typing `python`.
 - During installation, make sure to check the box that says "Add Python to PATH."
 
@@ -66,7 +67,7 @@ When you first start micko, you will be prompted with the configuration window. 
 
 >[!TIP]
 > ### Auto-Start on Windows
-> Here are easy steps on how to start micko with your windows:
+> Here are easy steps on how to start micko with your Windows:
 > - __Create Shortcut:__ Right-click on run_micko.pyw and create a shortcut.
 > - __Open Startup Folder:__ Press `Windows+R`, type `shell::startup`, and press Enter.
 > - __Add Shortcut:__ Drag the shortcut into the opened Startup folder.
