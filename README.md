@@ -36,7 +36,7 @@ Follow these steps to install micko on your Windows machine:
 - Navigate to the directory using `cd <C:\Path>` where you want to install micko.
 - Run the following command to clone the repository:
 
-```git clone https://github.com/your-username/micko.git```
+```git clone https://github.com/Parisuton/micko.git```
 
 ### Step 3: Navigate to micko Directory
 Change the working directory to the newly cloned micko folder:
