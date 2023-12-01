@@ -31,6 +31,7 @@ Follow these steps to install micko on your Windows machine:
 - Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/) or by opening command prompt (cmd) and typing `python`.
 - During installation, make sure to check the box that says "Add Python to PATH."
 
+
 ### Step 2: Clone the Repository
 > [!IMPORTANT]
 > __Prerequisite: Git Installation__
@@ -42,14 +43,17 @@ Follow these steps to install micko on your Windows machine:
 
 ```git clone https://github.com/Parisuton/micko.git```
 
+
 ### Step 3: Navigate to micko Directory
 Change the working directory to the newly cloned micko folder:
 ```cd micko```
+
 
 ### Step 4: Install micko's Dependencies
 Run the following command to install the required Python packages:
 
 ```pip install -r requirements.txt```
+
 
 ### Step 5: Run micko
 Run micko using the following command:
@@ -60,14 +64,10 @@ You can also make a shortcut for micko by right-clicking on run_micko.pyw and se
 
 When you first start micko, you will be prompted with the configuration window. After that you should find it in the system tray. Search for the micko icon!
 
-## Auto-Start on Windows
-
-Here are easy steps on how to start micko with your windows:
-
-- __Create Shortcut:__ Right-click on run_micko.pyw and create a shortcut.
-
-- __Open Startup Folder:__ Press `Windows+R`, type `shell::startup`, and press Enter.
-
-- __Add Shortcut:__ Drag the shortcut into the opened Startup folder.
-
-Now, micko will run on Windows startup.
+>[!TIP]
+> ### Auto-Start on Windows
+> Here are easy steps on how to start micko with your windows:
+> - __Create Shortcut:__ Right-click on run_micko.pyw and create a shortcut.
+> - __Open Startup Folder:__ Press `Windows+R`, type `shell::startup`, and press Enter.
+> - __Add Shortcut:__ Drag the shortcut into the opened Startup folder.
+> Now, micko will run on Windows startup.
