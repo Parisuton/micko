@@ -40,9 +40,7 @@ Follow these steps to install micko on your Windows machine:
 
 - Open the command prompt (cmd) or terminal.
 - Navigate to the directory using `cd <C:\Path>` where you want to install micko.
-- Run the following command to clone the repository:
-
-```git clone https://github.com/Parisuton/micko.git```
+- Run the following command to clone the repository: ```git clone https://github.com/Parisuton/micko.git```
 
 
 ### Step 3: Navigate to micko Directory
@@ -51,15 +49,11 @@ Change the working directory to the newly cloned micko folder:
 
 
 ### Step 4: Install micko's Dependencies
-Run the following command to install the required Python packages:
-
-```pip install -r requirements.txt```
+Run the following command to install the required Python packages: ```pip install -r requirements.txt```
 
 
 ### Step 5: Run micko
-Run micko using the following command:
-
-```python run_micko.py```
+Run micko using the following command: ```python run_micko.py```
 
 You can also make a shortcut for micko by right-clicking on run_micko.pyw and selecting "Send to" --> "Desktop (create shortcut)". You can now double-click the shortcut.
 
