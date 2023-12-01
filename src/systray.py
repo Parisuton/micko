@@ -59,7 +59,7 @@ def create_systray():
     image = Image.open(icon_path)
 
     # Create menu items
-    menu = (item('Toggle Microphone Listening', toggle_microphone, default=True),
+    menu = (item('Toggle Microphone Monitoring', toggle_microphone, default=True),
             item('Open Configuration', open_configuration),
             item('Exit Application', exit_application))
 

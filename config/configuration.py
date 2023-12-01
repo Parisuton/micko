@@ -9,7 +9,7 @@ from pathlib import Path
 class ConfigurationWindow:
     def __init__(self, parent):
         self.parent = parent
-        self.parent.title("Micko Monitor Config")
+        self.parent.title("micko Monitor Config")
         self.parent.geometry("415x190")
         self.set_dark_theme()  # Call the method to set the dark theme
         self.create_widgets()
