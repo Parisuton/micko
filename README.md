@@ -60,6 +60,6 @@ When you first start micko, you will be prompted with the configuration window. 
 > ### Auto-Start on Windows
 > Here are ezpz steps on how to start micko with your Windows:
 > - __Create Shortcut:__ Right-click on `run_micko.pyw` and create a shortcut.
-> - __Open Startup Folder:__ Press `Windows+R`, type `shell::startup`, and press Enter.
+> - __Open Startup Folder:__ Press `Windows+R`, type `shell:startup`, and press Enter.
 > - __Add Shortcut:__ Drag the shortcut into the opened Startup folder.
 > Now, micko will run on Windows startup.
