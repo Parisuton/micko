@@ -12,9 +12,17 @@ class ConfigurationWindow:
         self.parent.title("micko")
         self.parent.geometry("415x190")
         self.parent.resizable(False, False)
+        self.set_window_icon()
         self.set_dark_theme()
         self.create_widgets()
         self.load_settings()
+    
+    def set_window_icon(self):
+        icon_path = os.path.join("src", "icons", "micko.ico")
+        if os.path.exists(icon_path):
+            self.parent.iconbitmap(icon_path)
+        else:
+            print("micko.ico not found") #debug line
 
     def set_dark_theme(self):
         # Background color for the entire window
