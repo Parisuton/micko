@@ -31,7 +31,6 @@ def toggle_microphone(icon, item):
     global microphone_listening
     microphone_listening = not microphone_listening
 
-    # Change the icon based on microphone state
     if microphone_listening:
         start_mic_listener(icon)
     else:
@@ -44,6 +43,8 @@ def start_mic_listener(icon):
     if not mic_listener_process or mic_listener_process.poll() is not None:
         mic_listener_path = os.path.join(script_directory, "mic_listener.py")
         mic_listener_process = subprocess.Popen(["python", mic_listener_path],creationflags=subprocess.CREATE_NO_WINDOW)
+        
+        # Change the icon based on microphone state
         icon.icon = Image.open(os.path.join(script_directory, "icons/micko_recording.ico"))
 
 # Function to stop mic_listener.py and revert icon change
@@ -55,6 +56,8 @@ def stop_mic_listener(icon):
         mic_listener_process.terminate()
 
     mic_listener_process = None
+    
+    # Change the icon based on microphone state
     icon.icon = Image.open(os.path.join(script_directory, "icons/micko.ico"))
 
 # Function to create the system tray icon

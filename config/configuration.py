@@ -11,15 +11,16 @@ class ConfigurationWindow:
         self.parent = parent
         self.parent.title("micko")
         self.parent.geometry("415x190")
-        self.set_dark_theme()  # Call the method to set the dark theme
+        self.parent.resizable(False, False)
+        self.set_dark_theme()
         self.create_widgets()
         self.load_settings()
 
     def set_dark_theme(self):
-        # Set the background color for the entire window
+        # Background color for the entire window
         self.parent.configure(bg="#2E2E2E")
 
-        # Configure options to achieve a dark appearance
+        # Appearance
         self.parent.option_add('*TFrame*Background', '#2E2E2E')
         self.parent.option_add('*TFrame*Foreground', 'white')
         self.parent.option_add('*TLabel*Background', '#2E2E2E')
@@ -53,7 +54,7 @@ class ConfigurationWindow:
         self.note_var = tk.StringVar()
         self.note_var.set("A_")
         ttk.Combobox(frame, textvariable=self.note_var, values=["_B", "C", "D", "E", "F", "G", "A", "B", "C_", "D_", "E_", "F_", "G_", "A_", "B_", "C__"], state="readonly").grid(row=1, column=1, pady=10)
-        ttk.Button(frame, text="Preview", command=self.preview_sound).grid(row=1, column=2, padx=5)
+        ttk.Button(frame, text="Listen", command=self.preview_sound).grid(row=1, column=2, padx=5)
 
         # Sound Recording Devices
         ttk.Label(frame, text="Microphone Device").grid(row=2, column=0, pady=10)
@@ -94,10 +95,10 @@ class ConfigurationWindow:
     def update_combobox_width(self):
         # Dynamically update the dropdown width based on the length of the longest item
         longest_item = max(self.get_available_devices(), key=lambda x: len(x[1]))
-        width = len(longest_item[1]) + 2  # Add some extra space
+        width = len(longest_item[1]) + 2 
         self.device_combobox.config(width=width)
-        self.threshold_scale.config(length=width * 10)  # Adjust the length based on the width
-        self.threshold_entry.config(width=int(width / 2))  # Adjust the width of the entry based on the width
+        self.threshold_scale.config(length=width * 10)  # Adjusts the length based on the width
+        self.threshold_entry.config(width=int(width / 2))  # Adjusts the width of the entry based on the width
 
 
     def load_settings(self):
@@ -118,7 +119,7 @@ class ConfigurationWindow:
                     saved_device_name = next((device[1] for device in available_devices if device[0] == int(saved_device_index)), "")
                     self.device_var.set(saved_device_name)
         except FileNotFoundError:
-            pass  # If the file is not found, use default values
+            pass  # If the file is not found due to error, the other file knows some default values
 
     def save_settings(self):
         settings = {
