@@ -25,15 +25,13 @@ Once you have installed and ran micko, you will spot the micko icon (see above) 
 micko is designed to enhance your audio experience on Windows. It integrates seamlessly with your existing setup, offering a hassle-free monitoring solution. micko runs in the system tray, so look out for those bottom right icons!
 
 # Installation
-Follow these steps to install micko on your Windows machine:
-
 > [!NOTE]
 >### Prerequisites: Python and Git Installations
->Skip this if you have Python and Git installed on your Windows machine already.
 >1. Download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/windows/).
 >   - During installation, make sure to check the box that says "Add Python to PATH."
 >2. Download and install Git from the official website: [Git website](https://git-scm.com/downloads).
 
+Follow these steps to install micko on your Windows machine:
 
 ### Step 1: Clone the Repository
 - Open the command prompt (cmd) or terminal.
@@ -55,7 +53,7 @@ Run micko using the following command: ```python run_micko.pyw```
 
 You can also make a shortcut for micko by right-clicking on run_micko.pyw and selecting "Send to" --> "Desktop (create shortcut)". You can now double-click the shortcut.
 
-When you first start micko, you will be prompted with the configuration window. After that you should find it in the system tray. Search for the micko icon!
+When you first start micko, you will be prompted with the configuration window. After that you should find micko in the system tray. Search for the micko icon!
 
 
 >[!TIP]
