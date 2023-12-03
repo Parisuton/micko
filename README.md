@@ -9,7 +9,7 @@ micko is not your average microphone volume monitor—it's the enforcer of audio
 ## Features
 - __Threshold Volume Control:__ Adjust the microphone threshold volume with surgical precision using the intuitive slider. Fine-tune it to your preferred level for an optimal audio experience, ensuring that every shout is met with a strategic beep.
 
-- __Beep Sound Selection:__ Choose your preferred beep sound from a range of beeping options. Preview the sound with a simple click and set the tone that rings in your ears.
+- __Beep Sound Selection:__ Choose your preferred beep sound from a range of beeping options. Preview the sound with a simple click and set the tone that rings in your ears. micko uses sounds native to Windows, so you will not have to download any sounds.
 
 - __Device Selection:__ micko gives you the flexibility to choose your sound recording device. Browse through available devices and select the one that perfectly captures your voice.
 
