@@ -5,7 +5,7 @@ import threading
 import pystray
 from PIL import Image
 from pystray import MenuItem as item
-import webbrowser
+from pathlib import Path
 
 # Function to open configuration.py
 def open_configuration(icon, item):
@@ -14,7 +14,7 @@ def open_configuration(icon, item):
     if microphone_listening:
         stop_mic_listener(icon)
 
-    subprocess.run(["python", os.path.join("config", "configuration.py")],creationflags=subprocess.CREATE_NO_WINDOW)
+    subprocess.run(["python", os.path.join("config", "configuration.py")], creationflags=subprocess.CREATE_NO_WINDOW)
 
 # Function to exit the application
 def exit_application(icon, item):
@@ -23,8 +23,8 @@ def exit_application(icon, item):
     icon.stop()
     os._exit(0)
 
-def open_github(icon):
-    webbrowser.open("https://github.com/Parisuton/micko")
+def open_info(icon):
+    subprocess.run(["python", os.path.join("src", "infowindow.py")], creationflags=subprocess.CREATE_NO_WINDOW)
 
 # Function to toggle microphone
 def toggle_microphone(icon, item):
@@ -41,11 +41,11 @@ def start_mic_listener(icon):
     global mic_listener_process
     # If the process is not started or has terminated, start a new one
     if not mic_listener_process or mic_listener_process.poll() is not None:
-        mic_listener_path = os.path.join(script_directory, "mic_listener.py")
-        mic_listener_process = subprocess.Popen(["python", mic_listener_path],creationflags=subprocess.CREATE_NO_WINDOW)
+        mic_listener_path = Path(script_directory) / "mic_listener.py"  # Updated path using pathlib
+        mic_listener_process = subprocess.Popen(["python", str(mic_listener_path)], creationflags=subprocess.CREATE_NO_WINDOW)
         
         # Change the icon based on microphone state
-        icon.icon = Image.open(os.path.join(script_directory, "icons/micko_recording.ico"))
+        icon.icon = Image.open(Path(script_directory) / "assets" / "micko_recording.ico")  # Updated path using pathlib
 
 # Function to stop mic_listener.py and revert icon change
 def stop_mic_listener(icon):
@@ -58,18 +58,18 @@ def stop_mic_listener(icon):
     mic_listener_process = None
     
     # Change the icon based on microphone state
-    icon.icon = Image.open(os.path.join(script_directory, "icons/micko.ico"))
+    icon.icon = Image.open(Path(script_directory) / "assets" / "micko.ico")  # Updated path using pathlib
 
 # Function to create the system tray icon
 def create_systray():
-    icon_path = os.path.join(script_directory, "icons/micko.ico")
+    icon_path = Path(script_directory) / "assets" / "micko.ico"  # Updated path using pathlib
     image = Image.open(icon_path)
 
     # Create menu items
     menu = (item('micko:', toggle_microphone, default=True),
             item('Toggle Monitoring', toggle_microphone),
             item('Settings', open_configuration),
-            item('About', open_github),
+            item('About', open_info),
             item('Exit', exit_application))
 
     # Sets the default icon
@@ -85,6 +85,6 @@ if __name__ == "__main__":
     mic_listener_process = None
 
     # Get the script directory using sys.argv[0]
-    script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+    script_directory = Path(sys.argv[0]).resolve().parent.parent  # Updated to use pathlib
 
     create_systray()

@@ -18,11 +18,11 @@ class ConfigurationWindow:
         self.load_settings()
     
     def set_window_icon(self):
-        icon_path = os.path.join("src", "icons", "micko.ico")
+        icon_path = os.path.join("assets", "micko.ico")
         if os.path.exists(icon_path):
             self.parent.iconbitmap(icon_path)
         else:
-            print("micko.ico not found") #debug line
+            print("micko.ico not found. this is probably due to running configuration.py directly") #debug line
 
     def set_dark_theme(self):
         # Background color for the entire window

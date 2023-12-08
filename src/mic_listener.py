@@ -17,7 +17,7 @@ class MicrophoneListener:
 
         with sd.InputStream(device=self.sound_device, callback=callback, channels=1, samplerate=44100):
             while True:
-                sd.sleep(1000000)  # Sleep for a long time, as we don't intend to stop listening
+                sd.sleep(1000000)
 
     def load_configuration(self):
         config_path = Path(__file__).resolve().parent.parent / "config" / "config.json"

@@ -16,6 +16,8 @@ def check_config():
         while not config_path.exists():
             pass
 
+        subprocess.run([sys.executable, 'src/infowindow.py'], creationflags=subprocess.CREATE_NO_WINDOW)
+
     print("Configurations are loaded. Continue with the rest of the application.\n ##############\n\n\n")
 
 def main():
