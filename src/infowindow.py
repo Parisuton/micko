@@ -37,7 +37,7 @@ def show_info_window():
         info_window.after(0, update_animation1)
 
         # Add text label below the first gif
-        text_label1 = tk.Label(info_window, text="You will find micko running in your system tray, shown above.\nYou can pin micko on the taskbar by dragging the icon.")
+        text_label1 = tk.Label(info_window, text="You will find micko waiting for you in your system tray, shown above.\nYou can pin micko on the taskbar by dragging the icon.")
         text_label1.pack(pady=5)
 
     else:
