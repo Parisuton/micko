@@ -41,7 +41,7 @@ def start_mic_listener(icon):
     global mic_listener_process
     # If the process is not started or has terminated, start a new one
     if not mic_listener_process or mic_listener_process.poll() is not None:
-        mic_listener_path = Path(script_directory) / "mic_listener.py"  # Updated path using pathlib
+        mic_listener_path = Path(script_directory) / "src" / "mic_listener.py"  # Updated path using pathlib
         mic_listener_process = subprocess.Popen(["python", str(mic_listener_path)], creationflags=subprocess.CREATE_NO_WINDOW)
         
         # Change the icon based on microphone state
